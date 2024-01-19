@@ -52,11 +52,11 @@ const Login = () => {
               Forgot Password
             </Link>
           </div>
-          {/* <div className="mt-3 text-center">
+          <div className="mt-3 text-center">
             <Link to="/reset-password/:token" className="btn btn-link">
               Reset Password
             </Link>
-          </div> */}
+          </div>
         </form>
       </div>
     </div>
