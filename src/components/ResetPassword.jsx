@@ -17,8 +17,8 @@ const ResetPassword = () => {
       { headers: { Authorization: `Bearer ${token}` }
      });
     
-      setSuccessMessage(response.data.message); 
-      setErrorMessage(''); 
+      setSuccessMessage(response.data.message); // Assuming the server sends a success message
+      setErrorMessage(''); // Clear any previous error messages
     } catch (error) {
       console.error('Error in reset password request:', error)
       if (error.response.status === 403) {
