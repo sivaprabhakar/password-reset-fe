@@ -9,7 +9,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/api/signup', { name, email, password });
+      const response = await axios.post('https://password-reset-a41y.onrender.com/api/signup', { name, email, password });
       console.log(response.data); // Handle success, show a message to the user, etc.
     } catch (error) {
       console.error('Error signing up:', error.response ? error.response.data : error.message);

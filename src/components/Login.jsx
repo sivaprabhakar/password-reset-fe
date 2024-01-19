@@ -8,7 +8,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/api/login', { email, password });
+      const response = await axios.post('https://password-reset-a41y.onrender.com/api/login', { email, password });
       console.log(response.data); // Handle success, store the token, redirect, etc.
     } catch (error) {
       console.error('Error logging in:', error.response ? error.response.data : error.message);
@@ -52,11 +52,11 @@ const Login = () => {
               Forgot Password
             </Link>
           </div>
-          {/* <div className="mt-3 text-center">
+          <div className="mt-3 text-center">
             <Link to="/reset-password/:token" className="btn btn-link">
               Reset Password
             </Link>
-          </div> */}
+          </div>
         </form>
       </div>
     </div>

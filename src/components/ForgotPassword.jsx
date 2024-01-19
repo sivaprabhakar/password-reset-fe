@@ -7,7 +7,7 @@ const ForgotPassword = () => {
 
   const handleForgotPassword = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/api/forgot-password', { email });
+      const response = await axios.post('https://password-reset-a41y.onrender.com/api/forgot-password', { email });
       console.log(response.data); // Handle success, show a success message, etc.
     } catch (error) {
       console.error('Error sending forgot password request:', error.response ? error.response.data : error.message);

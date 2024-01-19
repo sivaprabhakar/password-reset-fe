@@ -12,13 +12,13 @@ const ResetPassword = () => {
     try {
       console.log('Token:', token);
       console.log('Sending reset request with token:', token);
-      const response = await axios.post('http://localhost:8000/api/reset-password', 
+      const response = await axios.post('https://password-reset-a41y.onrender.com/api/reset-password', 
       { password }, 
       { headers: { Authorization: `Bearer ${token}` }
      });
     
-      setSuccessMessage(response.data.message); // Assuming the server sends a success message
-      setErrorMessage(''); // Clear any previous error messages
+      setSuccessMessage(response.data.message); 
+      setErrorMessage(''); 
     } catch (error) {
       console.error('Error in reset password request:', error)
       if (error.response.status === 403) {
